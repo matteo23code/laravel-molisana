@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  color: blue;
+}
+
+.prodotti {
+  margin: 0 auto;
+  width: 1900px;
+  color: #002D75;
+}
+.prodotti .title {
+  transform: translateY(70px);
+  text-align: center;
+}
+.prodotti img {
+  margin-bottom: -5px;
+  width: 100%;
+}
+.prodotti .description {
+  background-color: #B8DAE4;
+  padding: 0 70px 0 70px;
+}

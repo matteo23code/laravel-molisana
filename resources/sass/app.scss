@@ -1,0 +1,35 @@
+//
+@import 'variable';
+
+*{
+@include reset;
+}
+
+
+header{
+color:blue;
+}
+
+
+.prodotti{
+  margin: 0 auto;
+  width: 1900px;
+  color: $color-blue;
+
+  
+  .title{
+      transform: translateY(70px);
+      text-align: center;
+  }
+
+  img{
+    margin-bottom: -5px;
+    width: 100%;
+  }
+
+  .description{
+      background-color: #B8DAE4;
+      padding: 0 70px 0 70px;
+  }
+
+}

@@ -7,14 +7,31 @@
 
 
 header{
-color:blue;
+text-align: center;
+ 
+li{
+  display: inline-block;
+  padding: 15px 10px 15px 10px;
+  margin-top: 30px;
+  font-weight: bold;
+  
+  a{
+    text-decoration: none;
+    color: black;
+  }
 }
 
+li:nth-child(2){
+  background-color:$color-azure;
+}
+
+}
 
 .prodotti{
   margin: 0 auto;
-  width: 1900px;
+  width: 1400px;
   color: $color-blue;
+  background-color: $color-azure;
 
   
   .title{
@@ -23,13 +40,75 @@ color:blue;
   }
 
   img{
-    margin-bottom: -5px;
-    width: 100%;
+    margin: 0 auto;
+    width: 80%;
+    transform: translate(150px);
   }
 
   .description{
-      background-color: #B8DAE4;
+      background-color:$color-azure;
       padding: 0 70px 0 70px;
   }
 
+}
+
+//inizio home
+.container{
+  background-image: url('/img/fondo-pag-speciali.jpg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: $color-blue;
+  
+    div{
+      width: 1400px;
+      margin: 0 auto;
+      
+    h3{
+      padding: 20px 0px;
+    }
+    
+    img{
+      margin: 5px;
+      width: 450px;
+    }
+  }
+}
+
+footer{
+  width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  
+  div{
+    
+    width: 450px;
+    margin-top: 70px;
+    
+    li{
+      list-style-type: none;
+      font-size: 16px;
+      font-weight: bold;
+      opacity: 0.5;
+      line-height: 1.5;
+    }
+
+    h2{
+      margin-bottom: 20px;
+    }
+
+    .prod{
+      margin-top: 20px;
+    }
+    
+  }
+
+  .footer-img {
+    width: 1400px;
+    img{
+      width: 100%;
+    }
+  }
 }

@@ -5,23 +5,88 @@
 }
 
 header {
-  color: blue;
+  text-align: center;
+}
+header li {
+  display: inline-block;
+  padding: 15px 10px 15px 10px;
+  margin-top: 30px;
+  font-weight: bold;
+}
+header li a {
+  text-decoration: none;
+  color: black;
+}
+header li:nth-child(2) {
+  background-color: #B8DAE4;
 }
 
 .prodotti {
   margin: 0 auto;
-  width: 1900px;
+  width: 1400px;
   color: #002D75;
+  background-color: #B8DAE4;
 }
 .prodotti .title {
   transform: translateY(70px);
   text-align: center;
 }
 .prodotti img {
-  margin-bottom: -5px;
-  width: 100%;
+  margin: 0 auto;
+  width: 80%;
+  transform: translate(150px);
 }
 .prodotti .description {
   background-color: #B8DAE4;
   padding: 0 70px 0 70px;
+}
+
+.container {
+  background-image: url("/img/fondo-pag-speciali.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #002D75;
+}
+.container div {
+  width: 1400px;
+  margin: 0 auto;
+}
+.container div h3 {
+  padding: 20px 0px;
+}
+.container div img {
+  margin: 5px;
+  width: 450px;
+}
+
+footer {
+  width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+footer div {
+  width: 450px;
+  margin-top: 70px;
+}
+footer div li {
+  list-style-type: none;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: 0.5;
+  line-height: 1.5;
+}
+footer div h2 {
+  margin-bottom: 20px;
+}
+footer div .prod {
+  margin-top: 20px;
+}
+footer .footer-img {
+  width: 1400px;
+}
+footer .footer-img img {
+  width: 100%;
 }

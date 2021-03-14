@@ -13,13 +13,34 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+    $pasta = config('pasta');
+    
+    return view('home',[ 
+        'pastaArray' => $pasta
+        ]);
+    });
+
+    
+    
+    Route::get('/layout', function () {
+        return view('home',
+            ['name' => 'Taylor']
+            );
+    });
+
+
+Route::get('/product/{id?}', function($id = null) {
+    if(empty($id)) {
+        return redirect('/'); //per simulare un errore usare abort(es.404)
+    }
+    return view('prodotti',
+        ['idProduct' => $id]
+    );
 });
 
-Route::get('/home-page', function () {
-    return view('home');
-});
+
 
 Route::get('/product/{id}', function($id) {
     return view('prodotti',

@@ -1,6 +1,6 @@
-@php
+<?php
     // il data lo mettiamo qui inizialmente poi lo sposteremo in config
-  $data = '[
+    $data = '[
       {
         "src": "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-m.jpg",
         "src-h": "https://www.lamolisana.it/wp-content/uploads/2017/06/4-spaghetto-quadrato-bucato-h.jpg",
@@ -122,29 +122,5 @@
         "descrizione": "Altro elemento cult della famiglia de lo Spaghetto Quadrato (N.1 Spaghetto Quadrato. Una new entry che sarà molto apprezzata sia dai consumatori che dagli chef, perché il Ditale Quadrato è un formato deliziosamente piccolo ma sostanzioso.<br>A dispetto del nome che fa pensare ad una pastina è un formato di pasta assolutamente versatile, adatto a moltissime ricette di primi piatti.<br>La sua consistenza soda si sprigiona in bocca con un\'esplosione di emozioni, grazie agli spessori corposi, al colore elegantemente ambrato, alla texture delicatamente ruvida, cangiante e piacevolissima al tatto che trattiene il condimento sulla superficie.<br>Il Ditale Quadrato sembra ideale per preparazioni strutturate come la ricetta con crema di broccoletto siciliano, calamari e pomodori semi secchi profumata al limone e carbone d\'olive nere."
       }
       ]';
-    $array = json_decode($data, true); 
-@endphp
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Prodotti</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-</head>
-<body>
-  @include('component.header')
- <main class="prodotti">
-    <h2 class="title">{{ $array[$idProduct - 1]['titolo'] }}</h2>
-    <br>
-    <img src="{{ $array[$idProduct - 1 ]['src-h'] }}" alt=""> 
-    <br>
-    <img src="{{ $array[$idProduct - 1]['src-p'] }}" alt="">
-    <br>
-    <h2 class="description">{!!$array[$idProduct - 1]['descrizione'] !!}</h2>
- </main>
- @include('component.footer')
-</body>
-</html>
-
-
+    return json_decode($data, true);
+    ?>
